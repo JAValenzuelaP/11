@@ -1,0 +1,457 @@
+declare
+@hora varchar(10) = '1:30'  --LA HORA VA SIN 0 CUANDO ES MENOR A 10
+--orden de tablas al 27 de julio 2022
+
+BEGIN 
+
+	if @hora = '6:50'
+	begin 
+	select count(*), 'ap_hold_codes',1 from MGT_GLO_OCLOUD.ap_hold_codes union all
+	select count(*), 'ap_terms_b',2 from MGT_GLO_OCLOUD.ap_terms_b union all
+	select count(*), 'doo_fulfill_lines_all',3 from MGT_GLO_OCLOUD.doo_fulfill_lines_all union all
+	select count(*), 'wsh_delivery_details',4 from MGT_GLO_OCLOUD.wsh_delivery_details union all
+	select count(*), 'fnd_documents_tl',5 from MGT_GLO_OCLOUD.fnd_documents_tl union all
+	select count(*), 'msc_ap_egp_system_items_v',6 from MGT_GLO_OCLOUD.msc_ap_egp_system_items_v union all
+	select count(*), 'zx_accounts',7 from MGT_GLO_OCLOUD.zx_accounts union all
+	select count(*), 'zx_fc_types_b',8 from MGT_GLO_OCLOUD.zx_fc_types_b union all
+	select count(*), 'zx_fc_types_tl',9 from MGT_GLO_OCLOUD.zx_fc_types_tl union all
+	select count(*), 'zx_formula_b',10 from MGT_GLO_OCLOUD.zx_formula_b union all
+	select count(*), 'zx_item_distributions',11 from MGT_GLO_OCLOUD.zx_item_distributions union all
+	select count(*), 'zx_jurisdictions_b',12 from MGT_GLO_OCLOUD.zx_jurisdictions_b union all
+	select count(*), 'zx_rates_tl',13 from MGT_GLO_OCLOUD.zx_rates_tl union all
+	select count(*), 'zx_regimes_b',14 from MGT_GLO_OCLOUD.zx_regimes_b union all
+	select count(*), 'zx_status_b',15 from MGT_GLO_OCLOUD.zx_status_b 
+	order by 3
+	end
+
+	else if @hora = '7:40'
+	begin 
+	select count(*), 'ar_collectors',16 from MGT_GLO_OCLOUD.ar_collectors union all
+	select count(*), 'cst_internal_txn_types_tl',17 from MGT_GLO_OCLOUD.cst_internal_txn_types_tl union all
+	select count(*), 'cst_scenario_rollup_details',18 from MGT_GLO_OCLOUD.cst_scenario_rollup_details union all
+	select count(*), 'fnd_vs_typed_values_vl',19 from MGT_GLO_OCLOUD.fnd_vs_typed_values_vl union all
+	select count(*), 'hr_all_organization_units_vl',20 from MGT_GLO_OCLOUD.hr_all_organization_units_vl union all
+	select count(*), 'hr_documents_of_record',21 from MGT_GLO_OCLOUD.hr_documents_of_record union all
+	select count(*), 'iby_ext_bank_accounts_v',22 from MGT_GLO_OCLOUD.iby_ext_bank_accounts_v union all
+	select count(*), 'inv_transfer_order_lines',23 from MGT_GLO_OCLOUD.inv_transfer_order_lines union all
+	select count(*), 'jtf_rs_roles_b',24 from MGT_GLO_OCLOUD.jtf_rs_roles_b union all
+	select count(*), 'pjc_exp_items_all',25 from MGT_GLO_OCLOUD.pjc_exp_items_all union all
+	select count(*), 'wie_wo_operation_materials',26 from MGT_GLO_OCLOUD.wie_wo_operation_materials union all
+	select count(*), 'wie_wo_operation_resources',27 from MGT_GLO_OCLOUD.wie_wo_operation_resources union all
+	select count(*), 'wie_wo_dispatch_lists_v',28 from MGT_GLO_OCLOUD.wie_wo_dispatch_lists_v union all
+	select count(*), 'zx_conditions',29 from MGT_GLO_OCLOUD.zx_conditions union all
+	select count(*), 'zx_event_classes_b',30 from MGT_GLO_OCLOUD.zx_event_classes_b union all
+	select count(*), 'zx_formula_tl',31 from MGT_GLO_OCLOUD.zx_formula_tl union all
+	select count(*), 'zx_jurisdictions_tl',32 from MGT_GLO_OCLOUD.zx_jurisdictions_tl union all
+	select count(*), 'zx_rules_b',33 from MGT_GLO_OCLOUD.zx_rules_b union all
+	select count(*), 'zx_rules_tl',34 from MGT_GLO_OCLOUD.zx_rules_tl
+	order by 3
+	end
+
+	else if @hora = '8:00'
+	begin 
+	select count(*), 'ar_memo_lines_all_b',35 from MGT_GLO_OCLOUD.ar_memo_lines_all_b union all
+	select count(*), 'ar_memo_lines_all_tl',36 from MGT_GLO_OCLOUD.ar_memo_lines_all_tl union all
+	select count(*), 'ar_receipt_methods',37 from MGT_GLO_OCLOUD.ar_receipt_methods union all
+	select count(*), 'ar_system_parameters_all',38 from MGT_GLO_OCLOUD.ar_system_parameters_all union all
+	select count(*), 'ce_index_bank_branches',39 from MGT_GLO_OCLOUD.ce_index_bank_branches union all
+	select count(*), 'cmp_salary_bases',40 from MGT_GLO_OCLOUD.cmp_salary_bases union all
+	select count(*), 'egp_search_cross_references_v',41 from MGT_GLO_OCLOUD.egp_search_cross_references_v union all
+	select count(*), 'hr_all_positions',42 from MGT_GLO_OCLOUD.hr_all_positions 
+	order by 3
+	end
+
+	else if @hora = '8:10' --se incluye 1 tabla de 8:15
+	begin 
+	select count(*), 'per_people_f',43 from MGT_GLO_OCLOUD.per_people_f union all
+	select count(*), 'per_persons_v',44 from MGT_GLO_OCLOUD.per_persons_v union all
+	select count(*), 'hr_organization_information',45 from MGT_GLO_OCLOUD.hr_organization_information union all
+	select count(*), 'wie_resource_transactions',46 from MGT_GLO_OCLOUD.wie_resource_transactions union all
+	select count(*), 'gl_ledger_configurations',47 from MGT_GLO_OCLOUD.gl_ledger_configurations union all
+	select count(*), 'gl_ledger_config_details',48 from MGT_GLO_OCLOUD.gl_ledger_config_details union all
+	select count(*), 'gl_tax_codes_v',49 from MGT_GLO_OCLOUD.gl_tax_codes_v union all
+	select count(*), 'pjf_tasks_v',50 from MGT_GLO_OCLOUD.pjf_tasks_v union all
+	select count(*), 'ap_inv_aprvl_hist_all',51 from MGT_GLO_OCLOUD.ap_inv_aprvl_hist_all union all
+	select count(*), 'cst_transactions',52 from MGT_GLO_OCLOUD.cst_transactions 
+	order by 3
+	end
+
+	else if @hora = '8:20'
+	begin 
+	select count(*), 'ar_ref_accounts_all',53 from MGT_GLO_OCLOUD.ar_ref_accounts_all union all
+	select count(*), 'ar_trx_summary',54 from MGT_GLO_OCLOUD.ar_trx_summary union all
+	select count(*), 'ben_pl_f',55 from MGT_GLO_OCLOUD.ben_pl_f union all
+	select count(*), 'ben_pl_typ_f',56 from MGT_GLO_OCLOUD.ben_pl_typ_f union all
+	select count(*), 'ce_recon_history_items',57 from MGT_GLO_OCLOUD.ce_recon_history_items union all
+	select count(*), 'cst_scenario_rollup_headers',58 from MGT_GLO_OCLOUD.cst_scenario_rollup_headers union all
+	select count(*), 'cst_scenarios',59 from MGT_GLO_OCLOUD.cst_scenarios union all
+	select count(*), 'egp_item_classes_tl',60 from MGT_GLO_OCLOUD.egp_item_classes_tl union all
+	select count(*), 'exm_expenses',61 from MGT_GLO_OCLOUD.exm_expenses union all
+	select count(*), 'hr_all_positions_f_tl',62 from MGT_GLO_OCLOUD.hr_all_positions_f_tl union all
+	select count(*), 'hr_document_types_tl',63 from MGT_GLO_OCLOUD.hr_document_types_tl union all
+	select count(*), 'per_roles_dn_tl',64 from MGT_GLO_OCLOUD.per_roles_dn_tl union all
+	select count(*), 'pjf_proj_elements_b',65 from MGT_GLO_OCLOUD.pjf_proj_elements_b union all
+	select count(*), 'pjf_projects_all_b',66 from MGT_GLO_OCLOUD.pjf_projects_all_b union all
+	select count(*), 'po_agent_accesses',67 from MGT_GLO_OCLOUD.po_agent_accesses union all
+	select count(*), 'por_requisition_lines_all',68 from MGT_GLO_OCLOUD.por_requisition_lines_all union all
+	select count(*), 'wie_wo_statuses_tl',69 from MGT_GLO_OCLOUD.wie_wo_statuses_tl union all
+	select count(*), 'xle_registrations',70 from MGT_GLO_OCLOUD.xle_registrations union all
+	select count(*), 'zx_status_tl',71 from MGT_GLO_OCLOUD.zx_status_tl 
+	order by 3
+	end
+
+	else if @hora = '8:30'
+	begin
+	select count(*), 'msc_ap_suppliers_v',72 from MGT_GLO_OCLOUD.msc_ap_suppliers_v union all
+	select count(*), 'po_approved_supplier_list',73 from MGT_GLO_OCLOUD.po_approved_supplier_list 
+	order by 3
+	end
+
+	else if @hora = '8:40'
+	begin
+	select count(*), 'ce_bank_branches_v',74 from MGT_GLO_OCLOUD.ce_bank_branches_v union all
+	select count(*), 'cst_cost_elements_b',75 from MGT_GLO_OCLOUD.cst_cost_elements_b union all
+	select count(*), 'exm_expense_reports',76 from MGT_GLO_OCLOUD.exm_expense_reports union all
+	select count(*), 'fnd_lookup_values_b',77 from MGT_GLO_OCLOUD.fnd_lookup_values_b union all
+	select count(*), 'inv_material_txns',78 from MGT_GLO_OCLOUD.inv_material_txns union all
+	select count(*), 'pjc_xla_class_code_ref_v',79 from MGT_GLO_OCLOUD.pjc_xla_class_code_ref_v union all
+	select count(*), 'ra_terms_vl',80 from MGT_GLO_OCLOUD.ra_terms_vl union all
+	select count(*), 'wie_wo_operations_tl',81 from MGT_GLO_OCLOUD.wie_wo_operations_tl union all
+	select count(*), 'zx_regimes_tl',82 from MGT_GLO_OCLOUD.zx_regimes_tl 
+	order by 3
+	end
+
+	else if @hora = '9:10'
+	begin
+	select count(*), 'cmp_cwb_person_info',83 from MGT_GLO_OCLOUD.cmp_cwb_person_info union all
+	select count(*), 'cst_val_unit_details',84 from MGT_GLO_OCLOUD.cst_val_unit_details union all
+	select count(*), 'exm_expense_dists',85 from MGT_GLO_OCLOUD.exm_expense_dists union all
+	select count(*), 'fnd_objects',86 from MGT_GLO_OCLOUD.fnd_objects union all
+	select count(*), 'fnd_setid_assignments',87 from MGT_GLO_OCLOUD.fnd_setid_assignments union all
+	select count(*), 'hr_all_positions_f_vl',88 from MGT_GLO_OCLOUD.hr_all_positions_f_vl union all
+	select count(*), 'pay_bank_accnt_details_vl',89 from MGT_GLO_OCLOUD.pay_bank_accnt_details_vl union all
+	select count(*), 'po_doc_style_lines_vl',90 from MGT_GLO_OCLOUD.po_doc_style_lines_vl union all
+	select count(*), 'wis_wd_operation_materials_v',91 from MGT_GLO_OCLOUD.wis_wd_operation_materials_v union all
+	select count(*), 'zx_fc_codes_b',92 from MGT_GLO_OCLOUD.zx_fc_codes_b 
+	order by 3
+	end
+
+	else if @hora = '9:30'
+	begin
+	select count(*), 'exm_expense_templates',93 from MGT_GLO_OCLOUD.exm_expense_templates union all
+	select count(*), 'fa_additions_tl',94 from MGT_GLO_OCLOUD.fa_additions_tl union all
+	select count(*), 'fa_asset_history',95 from MGT_GLO_OCLOUD.fa_asset_history union all
+	select count(*), 'fa_distribution_history',96 from MGT_GLO_OCLOUD.fa_distribution_history union all
+	select count(*), 'fnd_kf_str_instances_vl',97 from MGT_GLO_OCLOUD.fnd_kf_str_instances_vl union all
+	select count(*), 'fnd_objects_tl',98 from MGT_GLO_OCLOUD.fnd_objects_tl 
+	order by 3
+	end
+
+	else if @hora = '9:40'
+	begin
+	select count(*), 'fnd_ts_data_source_params',99 from MGT_GLO_OCLOUD.fnd_ts_data_source_params union all
+	select count(*), 'hr_legal_entities',100 from MGT_GLO_OCLOUD.hr_legal_entities union all
+	select count(*), 'hr_organization_units_f_tl',101 from MGT_GLO_OCLOUD.hr_organization_units_f_tl union all
+	select count(*), 'per_asg_responsibilities',102 from MGT_GLO_OCLOUD.per_asg_responsibilities union all
+	select count(*), 'per_people_extra_info_f',103 from MGT_GLO_OCLOUD.per_people_extra_info_f union all
+	select count(*), 'per_roles_dn',104 from MGT_GLO_OCLOUD.per_roles_dn union all
+	select count(*), 'pjf_projects_all_vl',105 from MGT_GLO_OCLOUD.pjf_projects_all_vl union all
+	select count(*), 'pjf_system_linkages_vl',106 from MGT_GLO_OCLOUD.pjf_system_linkages_vl union all
+	select count(*), 'pjf_txn_doc_entry_vl',107 from MGT_GLO_OCLOUD.pjf_txn_doc_entry_vl union all
+	select count(*), 'wis_resources_tl',108 from MGT_GLO_OCLOUD.wis_resources_tl union all
+	select count(*), 'wis_wd_operations_tl',109 from MGT_GLO_OCLOUD.wis_wd_operations_tl union all
+	select count(*), 'zx_event_classes_tl',110 from MGT_GLO_OCLOUD.zx_event_classes_tl 
+	order by 3
+	end
+
+	else if @hora = '10:00'
+	begin
+	select count(*), 'ben_per_in_ler',111 from MGT_GLO_OCLOUD.ben_per_in_ler union all
+	select count(*), 'cst_cost_profiles_b',112 from MGT_GLO_OCLOUD.cst_cost_profiles_b union all
+	select count(*), 'cst_std_resource_rates',113 from MGT_GLO_OCLOUD.cst_std_resource_rates union all
+	select count(*), 'exm_cash_advances',114 from MGT_GLO_OCLOUD.exm_cash_advances union all
+	select count(*), 'exm_meals_policies',115 from MGT_GLO_OCLOUD.exm_meals_policies union all
+	select count(*), 'fa_books',116 from MGT_GLO_OCLOUD.fa_books union all
+	select count(*), 'fa_deprn_summary',117 from MGT_GLO_OCLOUD.fa_deprn_summary union all
+	select count(*), 'fa_transaction_headers',118 from MGT_GLO_OCLOUD.fa_transaction_headers union all
+	select count(*), 'fnd_application',119 from MGT_GLO_OCLOUD.fnd_application union all
+	select count(*), 'hz_organization_profiles',120 from MGT_GLO_OCLOUD.hz_organization_profiles union all
+	select count(*), 'msc_ap_boms_v',121 from MGT_GLO_OCLOUD.msc_ap_boms_v union all
+	select count(*), 'msc_planned_egp_system_items',122 from MGT_GLO_OCLOUD.msc_planned_egp_system_items union all
+	select count(*), 'per_addresses_f',123 from MGT_GLO_OCLOUD.per_addresses_f union all
+	select count(*), 'per_all_people_f',124 from MGT_GLO_OCLOUD.per_all_people_f union all
+	select count(*), 'per_periods_of_service',125 from MGT_GLO_OCLOUD.per_periods_of_service union all
+	select count(*), 'per_phones',126 from MGT_GLO_OCLOUD.per_phones union all
+	select count(*), 'po_line_locations_all',127 from MGT_GLO_OCLOUD.po_line_locations_all union all
+	select count(*), 'po_versions',128 from MGT_GLO_OCLOUD.po_versions union all
+	select count(*), 'por_req_distributions_all',129 from MGT_GLO_OCLOUD.por_req_distributions_all union all
+	select count(*), 'zmm_notes',130 from MGT_GLO_OCLOUD.zmm_notes 
+	order by 3
+	end
+
+	else if @hora = '10:20'
+	begin
+	select count(*), 'ap_payment_schedules_all',131 from MGT_GLO_OCLOUD.ap_payment_schedules_all union all
+	select count(*), 'ar_lookups',132 from MGT_GLO_OCLOUD.ar_lookups union all
+	select count(*), 'cst_txn_source_actions',133 from MGT_GLO_OCLOUD.cst_txn_source_actions union all
+	select count(*), 'cst_work_definitions',134 from MGT_GLO_OCLOUD.cst_work_definitions union all
+	select count(*), 'egp_categories_tl',135 from MGT_GLO_OCLOUD.egp_categories_tl union all
+	select count(*), 'egp_item_relationships_b',136 from MGT_GLO_OCLOUD.egp_item_relationships_b union all
+	select count(*), 'fnd_session_users',137 from MGT_GLO_OCLOUD.fnd_session_users union all
+	select count(*), 'hr_all_organization_units_f',138 from MGT_GLO_OCLOUD.hr_all_organization_units_f union all
+	select count(*), 'hr_all_organization_units_tl',139 from MGT_GLO_OCLOUD.hr_all_organization_units_tl union all
+	select count(*), 'hr_organization_v',140 from MGT_GLO_OCLOUD.hr_organization_v union all
+	select count(*), 'hz_cust_site_uses_all',141 from MGT_GLO_OCLOUD.hz_cust_site_uses_all union all
+	select count(*), 'hz_role_responsibility',142 from MGT_GLO_OCLOUD.hz_role_responsibility union all
+	select count(*), 'inv_physical_adjustments',143 from MGT_GLO_OCLOUD.inv_physical_adjustments union all
+	select count(*), 'inv_sales_orders',144 from MGT_GLO_OCLOUD.inv_sales_orders union all
+	select count(*), 'per_all_assignments_m',145 from MGT_GLO_OCLOUD.per_all_assignments_m union all
+	select count(*), 'per_grades_f_tl',146 from MGT_GLO_OCLOUD.per_grades_f_tl union all
+	select count(*), 'per_persons',147 from MGT_GLO_OCLOUD.per_persons union all
+	select count(*), 'per_user_roles',148 from MGT_GLO_OCLOUD.per_user_roles
+	order by 3
+	end
+	
+	else if @hora = '10:40'
+	begin
+	select count(*), 'ap_batches_all',149 from MGT_GLO_OCLOUD.ap_batches_all union all
+	select count(*), 'ap_invoice_payments_all',150 from MGT_GLO_OCLOUD.ap_invoice_payments_all union all
+	select count(*), 'cst_std_cost_details',151 from MGT_GLO_OCLOUD.cst_std_cost_details union all
+	select count(*), 'egp_structures_b',152 from MGT_GLO_OCLOUD.egp_structures_b union all
+	select count(*), 'exm_cash_adv_history',153 from MGT_GLO_OCLOUD.exm_cash_adv_history union all
+	select count(*), 'fnd_application_tl',154 from MGT_GLO_OCLOUD.fnd_application_tl union all
+	select count(*), 'fnd_attached_documents',155 from MGT_GLO_OCLOUD.fnd_attached_documents union all
+	select count(*), 'fnd_documents',156 from MGT_GLO_OCLOUD.fnd_documents union all
+	select count(*), 'fnd_user_preferences',157 from MGT_GLO_OCLOUD.fnd_user_preferences union all
+	select count(*), 'inv_transaction_types',158 from MGT_GLO_OCLOUD.inv_transaction_types union all
+	select count(*), 'per_grades',159 from MGT_GLO_OCLOUD.per_grades union all
+	select count(*), 'pjf_class_codes_tl',160 from MGT_GLO_OCLOUD.pjf_class_codes_tl union all
+	select count(*), 'pjf_exp_categories_vl',161 from MGT_GLO_OCLOUD.pjf_exp_categories_vl union all
+	select count(*), 'pjf_exp_types_vl',162 from MGT_GLO_OCLOUD.pjf_exp_types_vl union all
+	select count(*), 'ra_cust_trx_types_all',163 from MGT_GLO_OCLOUD.ra_cust_trx_types_all union all
+	select count(*), 'wie_work_orders_tl',164 from MGT_GLO_OCLOUD.wie_work_orders_tl union all
+	select count(*), 'wis_wd_operations_b',165 from MGT_GLO_OCLOUD.wis_wd_operations_b union all
+	select count(*), 'wis_work_definitions',166 from MGT_GLO_OCLOUD.wis_work_definitions union all
+	select count(*), 'wis_work_methods_b',167 from MGT_GLO_OCLOUD.wis_work_methods_b union all
+	select count(*), 'wis_work_methods_tl',168 from MGT_GLO_OCLOUD.wis_work_methods_tl 
+	order by 3
+	end
+
+	else if @hora = '11:00'
+	begin
+	select count(*), 'cst_resource_costs',169 from MGT_GLO_OCLOUD.cst_resource_costs union all
+	select count(*), 'cst_transaction_costs',170 from MGT_GLO_OCLOUD.cst_transaction_costs union all
+	select count(*), 'cst_transfer_costs',171 from MGT_GLO_OCLOUD.cst_transfer_costs union all
+	select count(*), 'fa_deprn_periods',172 from MGT_GLO_OCLOUD.fa_deprn_periods union all
+	select count(*), 'fa_retirements',173 from MGT_GLO_OCLOUD.fa_retirements union all
+	select count(*), 'fnd_currencies_vl',174 from MGT_GLO_OCLOUD.fnd_currencies_vl union all
+	select count(*), 'fnd_menu_entries',175 from MGT_GLO_OCLOUD.fnd_menu_entries union all
+	select count(*), 'gl_fiscal_period_v',176 from MGT_GLO_OCLOUD.gl_fiscal_period_v union all
+	select count(*), 'gl_ledger_config_details',177 from MGT_GLO_OCLOUD.gl_ledger_config_details union all
+	select count(*), 'gl_legal_entities_bsvs',178 from MGT_GLO_OCLOUD.gl_legal_entities_bsvs union all
+	select count(*), 'hr_locations',179 from MGT_GLO_OCLOUD.hr_locations union all
+	select count(*), 'hr_locations_all',180 from MGT_GLO_OCLOUD.hr_locations_all union all
+	select count(*), 'hz_cust_acct_sites_all',181 from MGT_GLO_OCLOUD.hz_cust_acct_sites_all union all
+	select count(*), 'per_action_reasons_b',182 from MGT_GLO_OCLOUD.per_action_reasons_b union all
+	select count(*), 'per_action_reasons_tl',183 from MGT_GLO_OCLOUD.per_action_reasons_tl union all
+	select count(*), 'per_rates_f_vl',184 from MGT_GLO_OCLOUD.per_rates_f_vl union all
+	select count(*), 'pjf_class_categories_tl',185 from MGT_GLO_OCLOUD.pjf_class_categories_tl union all
+	select count(*), 'qp_price_lists_all_b',186 from MGT_GLO_OCLOUD.qp_price_lists_all_b 
+	order by 3
+	end
+
+	else if @hora = '11:20'
+	begin
+	select count(*), 'ap_holds_all',187 from MGT_GLO_OCLOUD.ap_holds_all union all
+	select count(*), 'doo_headers_all_v',188 from MGT_GLO_OCLOUD.doo_headers_all_v union all
+	select count(*), 'egp_categories_vl',189 from MGT_GLO_OCLOUD.egp_categories_vl union all
+	select count(*), 'fa_methods',190 from MGT_GLO_OCLOUD.fa_methods union all
+	select count(*), 'fnd_form_functions_tl',191 from MGT_GLO_OCLOUD.fnd_form_functions_tl union all
+	select count(*), 'gl_daily_conversion_types',192 from MGT_GLO_OCLOUD.gl_daily_conversion_types union all
+	select count(*), 'hz_customer_profiles_f',193 from MGT_GLO_OCLOUD.hz_customer_profiles_f union all
+	select count(*), 'hz_party_sites',194 from MGT_GLO_OCLOUD.hz_party_sites union all
+	select count(*), 'inv_physical_inventories',195 from MGT_GLO_OCLOUD.inv_physical_inventories union all
+	select count(*), 'msc_ap_bom_components_v',196 from MGT_GLO_OCLOUD.msc_ap_bom_components_v union all
+	select count(*), 'per_jobs_f',197 from MGT_GLO_OCLOUD.per_jobs_f union all
+	select count(*), 'wis_work_centers_tl',198 from MGT_GLO_OCLOUD.wis_work_centers_tl
+	order by 3
+	end 
+
+	else if @hora = '11:40'
+	begin
+	select count(*), 'fnd_vs_values_b',199 from MGT_GLO_OCLOUD.fnd_vs_values_b union all
+	select count(*), 'fnd_vs_values_tl',200 from MGT_GLO_OCLOUD.fnd_vs_values_tl 
+	order by 3
+	end
+
+	--INICIA BLOQUE 3
+	else if @hora = '3:00'
+	begin
+	select count(*), 'cst_inv_transactions',201 from MGT_GLO_OCLOUD.cst_inv_transactions union all
+	select count(*), 'ego_item_eff_tl',202 from MGT_GLO_OCLOUD.ego_item_eff_tl union all
+	select count(*), 'egp_components_b',203 from MGT_GLO_OCLOUD.egp_components_b union all
+	select count(*), 'egp_item_cat_assignments',204 from MGT_GLO_OCLOUD.egp_item_cat_assignments union all
+	select count(*), 'egp_item_classes_b',205 from MGT_GLO_OCLOUD.egp_item_classes_b union all
+	select count(*), 'fnd_menus_tl',206 from MGT_GLO_OCLOUD.fnd_menus_tl union all
+	select count(*), 'hr_all_organization_units',207 from MGT_GLO_OCLOUD.hr_all_organization_units union all
+	select count(*), 'inv_generic_dispositions',208 from MGT_GLO_OCLOUD.inv_generic_dispositions union all
+	select count(*), 'inv_txn_source_types_b',209 from MGT_GLO_OCLOUD.inv_txn_source_types_b union all
+	select count(*), 'inv_uom_class_conversions',210 from MGT_GLO_OCLOUD.inv_uom_class_conversions union all
+	select count(*), 'inv_uom_conversions',211 from MGT_GLO_OCLOUD.inv_uom_conversions union all
+	select count(*), 'msc_parameters',212 from MGT_GLO_OCLOUD.msc_parameters union all
+	select count(*), 'pjf_txn_sources_vl',213 from MGT_GLO_OCLOUD.pjf_txn_sources_vl union all
+	select count(*), 'wie_work_orders_b',214 from MGT_GLO_OCLOUD.wie_work_orders_b union all
+	select count(*), 'wis_wd_operation_resources_v',215 from MGT_GLO_OCLOUD.wis_wd_operation_resources_v
+	order by 3
+	end
+
+	else if @hora = '3:20'
+	begin
+	select count(*), 'ar_receivables_trx_all',216 from MGT_GLO_OCLOUD.ar_receivables_trx_all union all
+	select count(*), 'cst_std_resource_rate_details',217 from MGT_GLO_OCLOUD.cst_std_resource_rate_details union all
+	select count(*), 'cst_val_unit_combinations',218 from MGT_GLO_OCLOUD.cst_val_unit_combinations union all
+	select count(*), 'fun_role_data_security_mapping',219 from MGT_GLO_OCLOUD.fun_role_data_security_mapping union all
+	select count(*), 'hz_locations',220 from MGT_GLO_OCLOUD.hz_locations union all
+	select count(*), 'jtf_rs_salesreps',221 from MGT_GLO_OCLOUD.jtf_rs_salesreps union all
+	select count(*), 'msc_ap_hard_reservations_v',222 from MGT_GLO_OCLOUD.msc_ap_hard_reservations_v union all
+	select count(*), 'msc_department_resources',223 from MGT_GLO_OCLOUD.msc_department_resources union all
+	select count(*), 'pay_assigned_payrolls_dn',224 from MGT_GLO_OCLOUD.pay_assigned_payrolls_dn union all
+	select count(*), 'per_departments',225 from MGT_GLO_OCLOUD.per_departments union all
+	select count(*), 'per_jobs',226 from MGT_GLO_OCLOUD.per_jobs union all
+	select count(*), 'poz_supplier_sites_v',227 from MGT_GLO_OCLOUD.poz_supplier_sites_v union all
+	select count(*), 'ra_batch_sources_all',228 from MGT_GLO_OCLOUD.ra_batch_sources_all union all
+	select count(*), 'ra_terms_tl',229 from MGT_GLO_OCLOUD.ra_terms_tl union all
+	select count(*), 'xle_entity_profiles',230 from MGT_GLO_OCLOUD.xle_entity_profiles 
+	order by 3
+	end
+
+	else if @hora = '3:40'
+	begin
+	select count(*), 'cst_cost_elements_tl',231 from MGT_GLO_OCLOUD.cst_cost_elements_tl union all
+	select count(*), 'cst_cost_inv_orgs',232 from MGT_GLO_OCLOUD.cst_cost_inv_orgs union all
+	select count(*), 'cst_val_structures_b',233 from MGT_GLO_OCLOUD.cst_val_structures_b union all
+	select count(*), 'egp_category_sets_b',234 from MGT_GLO_OCLOUD.egp_category_sets_b union all
+	select count(*), 'fnd_territories_tl',235 from MGT_GLO_OCLOUD.fnd_territories_tl union all
+	select count(*), 'gl_ledger_configurations',236 from MGT_GLO_OCLOUD.gl_ledger_configurations union all
+	select count(*), 'hr_organization_information_f',237 from MGT_GLO_OCLOUD.hr_organization_information_f union all
+	select count(*), 'hz_party_site_uses',238 from MGT_GLO_OCLOUD.hz_party_site_uses union all
+	select count(*), 'inv_onhand_quantities_detail',239 from MGT_GLO_OCLOUD.inv_onhand_quantities_detail union all
+	select count(*), 'inv_txn_source_types_tl',240 from MGT_GLO_OCLOUD.inv_txn_source_types_tl union all
+	select count(*), 'per_assignment_supervisors_f',241 from MGT_GLO_OCLOUD.per_assignment_supervisors_f union all
+	select count(*), 'per_people_legislative_f',242 from MGT_GLO_OCLOUD.per_people_legislative_f union all
+	select count(*), 'rcv_shipment_lines',243 from MGT_GLO_OCLOUD.rcv_shipment_lines union all
+	select count(*), 'wis_work_centers_vl',244 from MGT_GLO_OCLOUD.wis_work_centers_vl 
+	order by 3
+	end
+	
+	else if @hora = '4:00'
+	begin
+	select count(*), 'ap_terms_lines',245 from MGT_GLO_OCLOUD.ap_terms_lines union all
+	select count(*), 'ap_terms_tl',246 from MGT_GLO_OCLOUD.ap_terms_tl union all
+	select count(*), 'egp_category_sets_tl',247 from MGT_GLO_OCLOUD.egp_category_sets_tl union all
+	select count(*), 'exm_cash_adv_applications',248 from MGT_GLO_OCLOUD.exm_cash_adv_applications union all
+	select count(*), 'gl_je_sources_tl',249 from MGT_GLO_OCLOUD.gl_je_sources_tl union all
+	select count(*), 'inv_reservations',250 from MGT_GLO_OCLOUD.inv_reservations union all
+	select count(*), 'inv_transaction_reasons_b',251 from MGT_GLO_OCLOUD.inv_transaction_reasons_b union all
+	select count(*), 'inv_transaction_types_tl',252 from MGT_GLO_OCLOUD.inv_transaction_types_tl union all
+	select count(*), 'msc_reservations',253 from MGT_GLO_OCLOUD.msc_reservations union all
+	select count(*), 'msc_units_of_measure',254 from MGT_GLO_OCLOUD.msc_units_of_measure union all
+	select count(*), 'pay_all_payrolls_f',255 from MGT_GLO_OCLOUD.pay_all_payrolls_f union all
+	select count(*), 'zx_taxes_tl',256 from MGT_GLO_OCLOUD.zx_taxes_tl union all
+	select count(*), 'pay_rel_groups_dn',257 from MGT_GLO_OCLOUD.pay_rel_groups_dn union all
+	select count(*), 'per_assignments_f',258 from MGT_GLO_OCLOUD.per_assignments_f
+	order by 3
+	end
+
+	else if @hora = '4:20'
+	begin
+	select count(*), 'ben_pl_bnf',259 from MGT_GLO_OCLOUD.ben_pl_bnf union all
+	select count(*), 'doo_fulfill_line_details',260 from MGT_GLO_OCLOUD.doo_fulfill_line_details union all
+	select count(*), 'doo_statuses_b',261 from MGT_GLO_OCLOUD.doo_statuses_b union all
+	select count(*), 'exm_expense_types',262 from MGT_GLO_OCLOUD.exm_expense_types union all
+	select count(*), 'fnd_favorite_items',263 from MGT_GLO_OCLOUD.fnd_favorite_items union all
+	select count(*), 'fnd_setid_sets',264 from MGT_GLO_OCLOUD.fnd_setid_sets union all
+	select count(*), 'gl_calendars',265 from MGT_GLO_OCLOUD.gl_calendars union all
+	select count(*), 'iby_ext_bank_accounts',266 from MGT_GLO_OCLOUD.iby_ext_bank_accounts union all
+	select count(*), 'inv_transaction_types_b',267 from MGT_GLO_OCLOUD.inv_transaction_types_b union all
+	select count(*), 'per_person_type_usages_m',268 from MGT_GLO_OCLOUD.per_person_type_usages_m union all
+	select count(*), 'pjf_txn_document_vl',269 from MGT_GLO_OCLOUD.pjf_txn_document_vl union all
+	select count(*), 'qp_price_list_charges',270 from MGT_GLO_OCLOUD.qp_price_list_charges union all
+	select count(*), 'wis_wd_operation_resources',271 from MGT_GLO_OCLOUD.wis_wd_operation_resources union all
+	select count(*), 'wis_wd_operations_v',272 from MGT_GLO_OCLOUD.wis_wd_operations_v union all
+	select count(*), 'zx_fc_codes_tl',273 from MGT_GLO_OCLOUD.zx_fc_codes_tl 
+	order by 3
+	end
+
+	else if @hora = '4:40'
+	begin
+	select count(*), 'ben_prtt_enrt_rslt',274 from MGT_GLO_OCLOUD.ben_prtt_enrt_rslt union all
+	select count(*), 'cst_cost_books_b',275 from MGT_GLO_OCLOUD.cst_cost_books_b union all
+	select count(*), 'cst_item_cost_profiles',276 from MGT_GLO_OCLOUD.cst_item_cost_profiles union all
+	select count(*), 'cst_work_definition_items',277 from MGT_GLO_OCLOUD.cst_work_definition_items union all
+	select count(*), 'egp_item_categories_interface',278 from MGT_GLO_OCLOUD.egp_item_categories_interface union all
+	select count(*), 'fa_additions_b',279 from MGT_GLO_OCLOUD.fa_additions_b union all
+	select count(*), 'fa_locations',280 from MGT_GLO_OCLOUD.fa_locations union all
+	select count(*), 'gl_daily_rates',281 from MGT_GLO_OCLOUD.gl_daily_rates union all
+	select count(*), 'inv_transfer_order_headers',282 from MGT_GLO_OCLOUD.inv_transfer_order_headers union all
+	select count(*), 'pay_pay_relationships_dn',283 from MGT_GLO_OCLOUD.pay_pay_relationships_dn union all
+	select count(*), 'per_assignment_status_types_tl',284 from MGT_GLO_OCLOUD.per_assignment_status_types_tl union all
+	select count(*), 'per_col_agreements_f',285 from MGT_GLO_OCLOUD.per_col_agreements_f union all
+	select count(*), 'per_col_agreements_f_tl',286 from MGT_GLO_OCLOUD.per_col_agreements_f_tl union all
+	select count(*), 'per_email_addresses',287 from MGT_GLO_OCLOUD.per_email_addresses union all
+	select count(*), 'per_person_addr_usages_f',288 from MGT_GLO_OCLOUD.per_person_addr_usages_f union all
+	select count(*), 'po_line_types_tl',289 from MGT_GLO_OCLOUD.po_line_types_tl union all
+	select count(*), 'qp_price_lists_tl',290 from MGT_GLO_OCLOUD.qp_price_lists_tl union all
+	select count(*), 'wie_wo_statuses_b',291 from MGT_GLO_OCLOUD.wie_wo_statuses_b union all
+	select count(*), 'wis_resources_b',292 from MGT_GLO_OCLOUD.wis_resources_b union all
+	select count(*), 'zx_taxes_b',293 from MGT_GLO_OCLOUD.zx_taxes_b 
+	order by 3
+	end
+
+	else if @hora = '5:00'
+	begin
+	select count(*), 'ce_statement_lines',294 from MGT_GLO_OCLOUD.ce_statement_lines union all
+	select count(*), 'cmp_salary_bases_tl',295 from MGT_GLO_OCLOUD.cmp_salary_bases_tl union all
+	select count(*), 'cst_internal_txn_types_b',296 from MGT_GLO_OCLOUD.cst_internal_txn_types_b union all
+	select count(*), 'cst_val_units_b',297 from MGT_GLO_OCLOUD.cst_val_units_b union all
+	select count(*), 'doo_lines_all',298 from MGT_GLO_OCLOUD.doo_lines_all union all
+	select count(*), 'doo_statuses_tl',299 from MGT_GLO_OCLOUD.doo_statuses_tl union all
+	select count(*), 'egp_item_relationships_tl',300 from MGT_GLO_OCLOUD.egp_item_relationships_tl union all
+	select count(*), 'gl_period_statuses',301 from MGT_GLO_OCLOUD.gl_period_statuses union all
+	select count(*), 'hr_all_positions_f',302 from MGT_GLO_OCLOUD.hr_all_positions_f union all
+	select count(*), 'pay_payroll_assignments',303 from MGT_GLO_OCLOUD.pay_payroll_assignments union all
+	select count(*), 'pay_person_pay_methods_f',304 from MGT_GLO_OCLOUD.pay_person_pay_methods_f union all
+	select count(*), 'per_grades_f',305 from MGT_GLO_OCLOUD.per_grades_f union all
+	select count(*), 'per_jobs_f_tl',306 from MGT_GLO_OCLOUD.per_jobs_f_tl union all
+	select count(*), 'per_national_identifiers',307 from MGT_GLO_OCLOUD.per_national_identifiers ifiers union all
+	select count(*), 'per_rate_values_f',308 from MGT_GLO_OCLOUD.per_rate_values_f union all
+	select count(*), 'po_agent_assignments',309 from MGT_GLO_OCLOUD.po_agent_assignments union all
+	select count(*), 'qp_price_list_items',310 from MGT_GLO_OCLOUD.qp_price_list_items union all
+	select count(*), 'wis_wd_operations_vl',311 from MGT_GLO_OCLOUD.wis_wd_operations_vl union all
+	select count(*), 'xle_registrations_v',312 from MGT_GLO_OCLOUD.xle_registrations_v 
+	order by 3
+	end
+
+	else if @hora = '5:30'
+	begin
+	select count(*), 'ce_recon_history',313 from MGT_GLO_OCLOUD.ce_recon_history union all
+	select count(*), 'cmp_salary',314 from MGT_GLO_OCLOUD.cmp_salary union all
+	select count(*), 'egp_item_org_associations',315 from MGT_GLO_OCLOUD.egp_item_org_associations union all
+	select count(*), 'fun_all_business_units_v',316 from MGT_GLO_OCLOUD.fun_all_business_units_v union all
+	select count(*), 'hr_locations_all_f',317 from MGT_GLO_OCLOUD.hr_locations_all_f union all
+	select count(*), 'hr_organization_units',318 from MGT_GLO_OCLOUD.hr_organization_units union all
+	select count(*), 'inv_org_parameters',319 from MGT_GLO_OCLOUD.inv_org_parameters union all
+	select count(*), 'inv_transaction_reasons_tl',320 from MGT_GLO_OCLOUD.inv_transaction_reasons_tl union all
+	select count(*), 'jtf_rs_resource_profiles',321 from MGT_GLO_OCLOUD.jtf_rs_resource_profiles union all
+	select count(*), 'jtf_rs_role_relations',322 from MGT_GLO_OCLOUD.jtf_rs_role_relations union all
+	select count(*), 'pay_personal_payment_methods_f',323 from MGT_GLO_OCLOUD.pay_personal_payment_methods_f union all
+	select count(*), 'per_ext_app_identifiers',324 from MGT_GLO_OCLOUD.per_ext_app_identifiers ifiers union all
+	select count(*), 'pjc_xla_suppliers_ref_v',325 from MGT_GLO_OCLOUD.pjc_xla_suppliers_ref_v union all
+	select count(*), 'por_requisition_headers_all',326 from MGT_GLO_OCLOUD.por_requisition_headers_all union all
+	select count(*), 'poz_supplier_sites_all_m',327 from MGT_GLO_OCLOUD.poz_supplier_sites_all_m 
+	order by 3
+	end
+
+	else    select 'Hora no valida' 
+
+END
